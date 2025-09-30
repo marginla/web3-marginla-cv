@@ -13,6 +13,11 @@
       margin: 0;
       padding: 0;
       text-align: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: #0d1117;
+      color: #e6edf3;
     }
     header {
       padding: 40px 20px;
@@ -33,6 +38,10 @@
       display: inline-block;
       padding-bottom: 5px;
     }
+    body.dark-mode h2 {
+      color: #58a6ff;
+      border-bottom: 2px solid #333;
+    }
     section {
       padding: 20px;
       max-width: 800px;
@@ -42,23 +51,24 @@
     ul {
       line-height: 1.8;
     }
-    .download-btn {
-      display: inline-block;
-      margin: 20px auto;
+    .toggle-btn {
+      margin: 20px;
       padding: 10px 20px;
-      background-color: #58a6ff;
+      background: #58a6ff;
       color: #fff;
-      text-decoration: none;
+      border: none;
       border-radius: 8px;
+      cursor: pointer;
       font-weight: bold;
       transition: 0.3s;
     }
-    .download-btn:hover {
-      background-color: #0057b7;
+    .toggle-btn:hover {
+      background: #0057b7;
     }
   </style>
 </head>
 <body>
+  <button class="toggle-btn" onclick="toggleMode()">🌞 / 🌙</button>
   <header>
     <img src="marginla.png" alt="marginla avatar">
     <h1>marginla</h1>
@@ -93,11 +103,15 @@
     <p>Email: kevodanhc0102@email.com</p>
     <p>Twitter: <a href="#">@lanqiuzhiwang</a></p>
     <p>Telegram: <a href="#">@mengyoulangzi</a></p>
+    <p>EVM Wallet: <code>0x71c175fab91c1c6cabac495eb340edf3d006d8d1</code></p>
+    <p>ENS: <code>marginla.eth</code></p>
   </section>
 
-  <div style="text-align:center;">
-    <a href="#" class="download-btn" onclick="window.print()">Download CV (PDF)</a>
-  </div>
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
 ```
