@@ -1,116 +1,85 @@
+```html
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>marginla | Web3 CV</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #0d1117;
-      color: #e6edf3;
+      background-color: #ffffff;
+      color: #000000;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      text-align: center;
     }
     header {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: #161b22;
+      padding: 40px 20px;
     }
     header img {
+      border-radius: 50%;
       width: 150px;
       height: 150px;
-      border-radius: 50%;
+      object-fit: cover;
       border: 3px solid #58a6ff;
-      box-shadow: 0 0 10px rgba(88, 166, 255, 0.7);
-      margin-bottom: 1rem;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-style: italic;
-      color: #8b949e;
-    }
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
+    h1 {
+      margin: 10px 0 5px;
     }
     h2 {
-      border-bottom: 2px solid #30363d;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      color: #58a6ff;
+      color: #0057b7;
+      border-bottom: 2px solid #ddd;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
     }
     ul {
-      list-style: none;
-      padding: 0;
+      line-height: 1.8;
     }
-    ul li::before {
-      content: "• ";
-      color: #58a6ff;
-    }
-    .contact a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-    .download {
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .download button {
-      background: #238636;
-      border: none;
-      color: #fff;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      box-shadow: 0 0 8px rgba(35, 134, 54, 0.7);
-    }
-    .download button:hover {
-      background: #2ea043;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #161b22;
-      margin-top: 2rem;
-marginla.eth / 0x71c175Fab91C1c6cABaC495eb340Edf3d006D8d1
-    </p>
+  </style>
+</head>
+<body>
+  <header>
+    <img src="marginla.png" alt="marginla avatar">
+    <h1>marginla</h1>
+    <p>Ambassador Focus Group</p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p>Content creator & onchain detective, also known as “King of Perps” and an energetic Web3 newcomer. Passionate about community building, creating engaging content, and exploring real value across blockchain ecosystems.</p>
   </section>
 
-  <!-- Nút tải PDF -->
-  <div class="download">
-    <button onclick="downloadPDF()">📄 Download CV PDF</button>
-  </div>
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Content Creator</strong> – writing, editing, and spreading Web3 content</li>
+      <li><strong>Onchain Detective</strong> – analyzing blockchain data and tracking transactions</li>
+      <li><strong>King of Perps</strong> – knowledge & hands-on experience in perpetuals and DeFi trading</li>
+      <li><strong>Web3 Newcomer</strong> – fast learner with creative thinking</li>
+    </ul>
+  </section>
 
-  <footer>
-    © 2025 marginla | Web3 CV
-  </footer>
+  <section>
+    <h2>Main Projects</h2>
+    <ul>
+      <li><strong>Arbitrum</strong> – Active community participation, content promotion, growth support</li>
+      <li><strong>Movement</strong> – Contributing ideas, creating content, and connecting with community members</li>
+    </ul>
+  </section>
 
-  <script>
-    async function downloadPDF() {
-      const { jsPDF } = window.jspdf;
-      const pdf = new jsPDF("p", "pt", "a4");
-
-      // Lấy toàn bộ nội dung body
-      const content = document.body;
-
-      await pdf.html(content, {
-        callback: function (doc) {
-          doc.save("marginla-web3-cv.pdf");
-        },
-        x: 20,
-        y: 20,
-        width: 560,
-        windowWidth: 900
-      });
-    }
-  </script>
+  <section>
+    <h2>Contact</h2>
+    <p>Email: kevodanhc0102@email.com</p>
+    <p>Twitter: <a href="#">@lanqiuzhiwang</a></p>
+    <p>Telegram: <a href="#">@mengyoulangzi</a></p>
+  </section>
 </body>
 </html>
-
+```
