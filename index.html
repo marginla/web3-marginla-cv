@@ -48,15 +48,10 @@
       margin: auto;
       text-align: left;
     }
-    section img {
-      max-width: 100%;
-      border-radius: 12px;
-      margin: 15px 0;
-    }
     ul {
       line-height: 1.8;
     }
-    .toggle-btn {
+    .toggle-btn, .download-btn {
       margin: 20px;
       padding: 10px 20px;
       background: #58a6ff;
@@ -67,8 +62,11 @@
       font-weight: bold;
       transition: 0.3s;
     }
-    .toggle-btn:hover {
+    .toggle-btn:hover, .download-btn:hover {
       background: #0057b7;
+    }
+    footer {
+      margin: 30px 0;
     }
   </style>
 </head>
@@ -116,9 +114,21 @@
     <img src="contact-illustration.png" alt="Contact illustration">
   </section>
 
+  <footer>
+    <button class="download-btn" onclick="downloadCV()">⬇️ Download CV</button>
+  </footer>
+
   <script>
     function toggleMode() {
       document.body.classList.toggle('dark-mode');
+    }
+    function downloadCV() {
+      const element = document.createElement('a');
+      element.setAttribute('href', 'marginla-cv.pdf'); // replace with your actual CV file path
+      element.setAttribute('download', 'marginla-CV.pdf');
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
     }
   </script>
 </body>
